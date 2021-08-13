@@ -7,13 +7,9 @@ export default async function recebedorDeRequests(request, response) {
     const registroCriado = await client.items.create({
       itemType: '1055343',
       ...request.body,
-      // title: 'Comunidade de Teste',
-      // imageUrl: 'https://github.com/omariosouto.png',
-      // creatorSlug: 'omariosouto'
     })
 
     response.json({
-      dados: "algum dado qualquer",
       registroCriado: registroCriado
     })
 
